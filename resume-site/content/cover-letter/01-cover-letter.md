@@ -2,9 +2,9 @@
 order: 1
 title: "자기소개서"
 public: true
-name: "김범섭"
-name_en: "Beomsup Kim"
-email: "difox@naver.com"
+name: "배상준"
+name_en: "Sangjun Bae"
+email: "june960912@naver.com"
 phone: "010-9428-1226"
 position: "AI Backend Developer & MLOps Engineer"
 ---

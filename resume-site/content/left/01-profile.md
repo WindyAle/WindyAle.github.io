@@ -1,11 +1,11 @@
 ---
 order: 1
 public: true
-github: "https://github.com/WhatSupYap"
-email: "difox@naver.com"
+github: "https://github.com/WindyAle"
+email: "june960912@naver.com"
 image: "/images/profile.jpg"
-name: "김범섭"
-name_en: "Beomsup Kim"
+name: "배상준"
+name_en: "Sangjun Bae"
 ---
 
 **AI Backend Developer & MLOps Engineer**
