@@ -10,7 +10,7 @@ Next.js로 제작된 개인 이력서 및 포트폴리오 웹사이트입니다.
 1. 작업한 소스 코드를 `main` 브랜치에 **Push** 합니다.
 2. GitHub Actions가 자동으로 빌드(`npm run build`)를 수행합니다.
 3. 빌드된 결과물이 `gh-pages` 환경에 배포됩니다.
-4. 배포 주소: [https://whatsupyap.github.io](https://whatsupyap.github.io)
+4. 배포 주소: [https://windyale.github.io](https://windyale.github.io)
 
 ### 주의사항
 - `resume-site/out` 폴더는 깃에 올리지 않습니다. (`.gitignore`에 포함됨)
