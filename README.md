@@ -1,6 +1,6 @@
-# 이력서 & 포트폴리오 웹사이트 (Resume Site)
+# 포트폴리오 웹사이트 (Portfolio Site)
 
-Next.js로 제작된 개인 이력서 및 포트폴리오 웹사이트입니다. GitHub Actions를 통해 GitHub Pages로 자동 배포되도록 구성되어 있습니다.
+Next.js로 제작된 개인 포트폴리오 웹사이트입니다. GitHub Actions를 통해 GitHub Pages로 자동 배포되도록 구성되어 있습니다.
 
 ## 🚀 배포 방법 (Deployment)
 
@@ -52,7 +52,7 @@ career/
 ├── resume-site/                  # 웹사이트 소스 코드
 │   ├── app/                      # 페이지 및 라우팅
 │   ├── components/               # UI 컴포넌트
-│   ├── content/                  # 이력서 마크다운 파일들
+│   ├── content/                  # 포트폴리오 마크다운 파일들
 │   └── public/                   # 이미지 등 정적 파일
 ├── source/                       # (Git 제외) 원본 참고 자료
 └── README.md                     # 설명서

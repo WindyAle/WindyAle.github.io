@@ -15,7 +15,7 @@ export default function PrintButton() {
             className="print:hidden fixed top-8 right-8 bg-neutral-900 text-white px-6 py-3 rounded-full font-medium shadow-lg hover:bg-neutral-800 transition-colors flex items-center gap-2 z-50"
         >
             <Printer size={20} />
-            이력서 인쇄하기
+            포트폴리오 인쇄하기
         </button>
     );
 }

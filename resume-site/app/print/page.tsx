@@ -6,8 +6,8 @@ const PRINT_DOCS = [
     {
         href: '/print/resume',
         Icon: FileText,
-        title: '기본 이력서',
-        description: '인적사항, 기술 스택, 경력 요약, 프로젝트 목록을 A4 1장으로 압축한 표준 이력서입니다.',
+        title: '기본 포트폴리오',
+        description: '인적사항, 기술 스택, 경력 요약, 프로젝트 목록을 A4 1장으로 압축한 표준 포트폴리오입니다.',
         borderColor: 'border-slate-200 hover:border-slate-400',
         iconColor: 'text-slate-600',
     },
@@ -59,7 +59,7 @@ export default async function PrintHubPage() {
                         href="/"
                         className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white text-sm transition-colors"
                     >
-                        ← 이력서 사이트로 돌아가기
+                        ← 포트폴리오 사이트로 돌아가기
                     </Link>
                 </div>
             </header>
