@@ -53,12 +53,23 @@ export default async function Home() {
                       )}
                     </div>
 
-                    {/* Render Items (Cards) */}
-                    <div className="flex flex-col gap-2">
-                      {item.items?.map((subItem) => (
-                        <ProjectCard key={subItem.slug} item={subItem} />
-                      ))}
-                    </div>
+                    {/* Intro: render markdown content directly */}
+                    {item.items?.some(sub => sub.data.content_type === 'intro') ? (
+                      <div className="space-y-8">
+                        {item.items?.map((subItem) => (
+                          subItem.contentHtml ? (
+                            <MarkdownRenderer key={subItem.slug} contentHtml={subItem.contentHtml} />
+                          ) : null
+                        ))}
+                      </div>
+                    ) : (
+                      /* Render Items (Cards) */
+                      <div className="flex flex-col gap-2">
+                        {item.items?.map((subItem) => (
+                          <ProjectCard key={subItem.slug} item={subItem} />
+                        ))}
+                      </div>
+                    )}
                   </div>
                 )
                 }

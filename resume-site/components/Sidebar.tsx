@@ -77,6 +77,9 @@ export default function Sidebar({ items }: Props) {
                                             {subItem.data.description && (
                                                 <div className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{subItem.data.description}</div>
                                             )}
+                                            {subItem.data.award && (
+                                                <div className="text-xs text-amber-600 dark:text-amber-400 mt-1 font-medium">🏆 {subItem.data.award}</div>
+                                            )}
                                         </div>
                                     ))}
                                 </div>
