@@ -12,6 +12,7 @@ interface Props {
 }
 
 // Generate static params for all items
+export const dynamicParams = false;
 export async function generateStaticParams() {
     const items = await getAllEducationItems();
     return items.map((item) => ({
