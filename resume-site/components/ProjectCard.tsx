@@ -10,25 +10,7 @@ interface Props {
 export default function ProjectCard({ item, verticalLayout = false }: Props) {
   const { data } = item;
 
-  // AI & Infra specific keywords (case-insensitive)
-  const isAiOrInfra = (badge: string) => {
-    const aiKeywords = ['python', 'fastapi', 'aws', 'docker', 'langgraph', 'rag', 'llm', 'sllm'];
-    return aiKeywords.some(keyword => badge.toLowerCase().includes(keyword));
-  };
-
-  // Legacy stack (case-insensitive)
-  const isLegacy = (badge: string) => {
-    const legacyKeywords = ['c#', 'asp.net', 'windows'];
-    return legacyKeywords.some(keyword => badge.toLowerCase().includes(keyword));
-  };
-
-  const getBadgeStyle = (badge: string) => {
-    if (isAiOrInfra(badge)) {
-      return "bg-indigo-600 dark:bg-indigo-700 text-white border-indigo-700 dark:border-indigo-600";
-    }
-    if (isLegacy(badge)) {
-      return "bg-slate-500 dark:bg-slate-600 text-white border-slate-600 dark:border-slate-500";
-    }
+  const getBadgeStyle = () => {
     return "bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 border-neutral-200 dark:border-neutral-700";
   };
   const isPortfolio = data.content_type === 'portfolio';
@@ -87,7 +69,7 @@ export default function ProjectCard({ item, verticalLayout = false }: Props) {
             {data.badges && (
               <div className="flex flex-wrap gap-1.5 mb-2">
                 {(data.badges as string[]).map(badge => (
-                  <span key={badge} className={`text-[10px] font-medium px-2 py-0.5 rounded border ${getBadgeStyle(badge)}`}>
+                  <span key={badge} className={`text-[10px] font-medium px-2 py-0.5 rounded border ${getBadgeStyle()}`}>
                     {badge}
                   </span>
                 ))}
@@ -122,7 +104,7 @@ export default function ProjectCard({ item, verticalLayout = false }: Props) {
         {!verticalLayout && data.badges && (
           <div className="flex flex-wrap gap-1.5 mb-2 mt-1">
             {(data.badges as string[]).map(badge => (
-              <span key={badge} className={`text-[10px] font-medium px-2 py-0.5 rounded border ${getBadgeStyle(badge)}`}>
+              <span key={badge} className={`text-[10px] font-medium px-2 py-0.5 rounded border ${getBadgeStyle()}`}>
                 {badge}
               </span>
             ))}

@@ -1,5 +1,5 @@
 ---
-order: 3
+order: 2
 title: "웰다잉 도우미 챗봇"
 period: "2025.11.26 ~ 2025.12.17 (약 3주)"
 description: "LangGraph와 RAG 기반의 품위 있는 삶의 마무리를 돕는 AI 대화 상대 서비스"
