@@ -2,7 +2,7 @@
 order: 3
 title: "넷플릭스 구독 이탈 예측"
 period: "2025.10.01 ~ 2025.10.15 (2주)"
-description: "LightGBM 기반 구독 이탈 예측 모델 개발 및 하이퍼파라미터 튜닝을 통한 정밀도 96% 달성"
+description: "LightGBM 기반 구독 이탈 예측 모델"
 content_type: "portfolio"
 public: true
 badges: ["LightGBM", "Data Analysis", "Feature Engineering"]

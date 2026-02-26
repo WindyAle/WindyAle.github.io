@@ -1,14 +1,19 @@
 ---
 order: 2
-title: "웰다잉 도우미 챗봇"
+title: "Lifeclover"
 period: "2025.11.26 ~ 2025.12.17 (약 3주)"
-description: "LangGraph와 RAG 기반의 품위 있는 삶의 마무리를 돕는 AI 대화 상대 서비스"
+description: "품위 있는 삶의 마무리를 돕는 웰다잉 도우미"
 content_type: "portfolio"
 public: true
 badges: ["LangGraph", "RAG", "LLM", "Multi-Agent"]
 github: "https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN19-4th-3Team"
 image: "/images/projects/welldying/main.png"
 thumbnail: "/images/projects/welldying/thumbnail.png"
+gallery:
+  - "/images/projects/welldying/1.png"
+  - "/images/projects/welldying/2.png"
+  - "/images/projects/welldying/3.png"
+  - "/images/projects/welldying/4.png"
 ---
 
 # 웰다잉 도우미 챗봇

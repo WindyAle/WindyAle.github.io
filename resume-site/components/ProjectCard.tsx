@@ -65,6 +65,12 @@ export default function ProjectCard({ item, verticalLayout = false }: Props) {
                 </div>
               )}
             </div>
+            {/* Description for Vertical Layout */}
+            {data.description && (
+              <p className="text-neutral-600 dark:text-neutral-300 text-sm line-clamp-3 leading-relaxed mb-2">
+                {data.description}
+              </p>
+            )}
             {/* Badges for Vertical Layout */}
             {data.badges && (
               <div className="flex flex-wrap gap-1.5 mb-2">
@@ -100,6 +106,13 @@ export default function ProjectCard({ item, verticalLayout = false }: Props) {
           </div>
         )}
 
+        {/* Description for Horizontal Layout */}
+        {!verticalLayout && data.description && (
+          <p className="text-neutral-600 dark:text-neutral-300 text-sm line-clamp-3 leading-relaxed mb-2">
+            {data.description}
+          </p>
+        )}
+
         {/* Badges for Horizontal Layout (Only if not verticalLayout) */}
         {!verticalLayout && (data.badges || data.award) && (
           <div className="flex items-center justify-between gap-2 mb-2">
@@ -116,13 +129,6 @@ export default function ProjectCard({ item, verticalLayout = false }: Props) {
               </span>
             )}
           </div>
-        )}
-
-        {/* Prioritize description for the card view */}
-        {(data.description) && (
-          <p className="text-neutral-600 dark:text-neutral-300 text-sm line-clamp-3 leading-relaxed mt-1">
-            {data.description}
-          </p>
         )}
 
         {/* If valid GitHub link AND NOT a linkable card (since card click goes to detail), show it. */}

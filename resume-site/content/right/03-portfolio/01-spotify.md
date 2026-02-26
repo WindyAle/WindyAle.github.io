@@ -1,14 +1,20 @@
 ---
 order: 4
-title: "Spotify 데이터 기반 곡 추천 플랫폼"
+title: "MelodiMatch"
 period: "2025.09.15 ~ 2025.09.26 (약 2주)"
-description: "Spotify 2000~2025년 곡 데이터를 활용한 KNN 기반 유사 곡 추천 시스템"
+description: "Spotify 데이터를 활용한 유사도 기반 곡 추천 플랫폼"
 content_type: "portfolio"
 public: true
 badges: ["KNN", "Streamlit", "Data Analysis"]
 github: "https://github.com/SKNetworks-AI19-250818/SKN19-mini-2Team"
 image: "/images/projects/spotify/main.png"
 thumbnail: "/images/projects/spotify/thumbnail.png"
+gallery:
+  - "/images/projects/spotify/1.png"
+  - "/images/projects/spotify/2.png"
+  - "/images/projects/spotify/3.png"
+  - "/images/projects/spotify/4.png"
+  - "/images/projects/spotify/5.png"
 ---
 
 # Spotify 데이터 기반 곡 추천 플랫폼

@@ -1,62 +1,79 @@
 ---
 order: 1
-title: "카드사 상담사 AI 실시간 상담 지원 시스템"
+title: "CALL:ACT"
 period: "2025.12.18 ~ 2026.02.11 (약 8주)"
-description: "STT, RAG, LLM을 활용한 실시간 상담 지원 및 신입 상담원 교육용 시뮬레이션 시스템"
+description: "카드사 콜센터 상담원 업무 지원 서비스"
 content_type: "portfolio"
 public: true
-badges: ["STT", "TTS", "sLLM", "RAG", "LLM"]
+badges: ["sLLM Fine-tuning", "RAG", "STT/TTS", "Kanana", "React"]
 award: "SK Networks Family AI Camp 우수상"
 github: "https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN19-FINAL-1Team"
 youtube: "https://www.youtube.com/watch?v=V53akHQd8jU"
 image: "/images/projects/consult/main.png"
 thumbnail: "/images/projects/consult/thumbnail.png"
+gallery:
+  - "/images/projects/consult/1.png"
+  - "/images/projects/consult/2.png"
+  - "/images/projects/consult/3.png"
+  - "/images/projects/consult/4.png"
+  - "/images/projects/consult/5.png"
 ---
 
-# 카드사 상담사를 위한 AI 기반 실시간 상담 지원 시스템
+# CALL:ACT - 카드사 콜센터 상담원을 위한 AI 상담 업무 지원 서비스
 
-> **AI가 함께하는 상담, 더 빠르고 정확하게**
-> Speech-to-Text, RAG, LLM을 활용하여 상담사의 업무 효율을 극대화합니다.
+**인력 대체가 아닌, AI와 인간의 협업**
+> 상담 전/중/후 일련의 과정을 AI가 지원하여 상담사의 업무 효율을 극대화합니다.
 
-## 프로젝트 배경
+## 프로젝트 차별점
 
-카드사 고객센터에서 상담사들이 정확하고 빠른 상담을 제공할 수 있도록 AI 기반 실시간 지원 시스템을 개발했습니다. 음성 인식을 통해 고객의 질문을 실시간으로 분석하고, RAG와 LLM을 활용하여 최적의 답변을 추천합니다.
+기존 AICC(AI Contact Center)는 고객 만족도 하락과 상담원 이탈을 야기했습니다. CALL:ACT는 **AI가 상담원을 대체하는 것이 아니라, 상담원의 업무를 실시간으로 보조**하는 새로운 접근 방식을 제시합니다.
 
 ## 주요 기능
 
-- **실시간 음성 인식**: STT를 활용한 고객-상담사 대화 실시간 텍스트 변환
-- **AI 답변 추천**: RAG와 LLM 기반 상황별 최적 답변 제안
-- **상담 시뮬레이션**: 신입 상담원 교육을 위한 AI 가상 고객 시스템
+| 단계 | 기능 | 설명 |
+|------|------|------|
+| **상담 중** | 실시간 문서 검색 | VAD → STT → 키워드 추출 → RAG 검색 → 답변 가이드 제안 |
+| **상담 후** | 후처리 자동화 | 상담 내용 요약, 후처리 문서 생성, AI 기반 피드백 |
+| **교육** | 시뮬레이션 | 실제 상담 데이터 기반 AI 가상 고객과 훈련 |
 
 ## 담당 역할
 
-신입 상담원 교육용 **상담 시뮬레이션 시스템** 전담 개발:
+### 1. 핵심 키워드 추출 시스템
 
-- **도메인 특화 텍스트 보정 로직 설계**: 카드사 용어(카드론, 리볼빙, 한도 등)와 상담 맥락을 반영한 STT 결과물 정제 파이프라인 구축. 이전 프로젝트에서 익힌 데이터 전처리 감각을 '가공되지 않은 불완전한 음성 데이터' 처리에 적용
-- **sLLM 파인튜닝 및 AI 가상 고객 구현**: 보정된 텍스트 데이터를 기반으로 sLLM을 파인튜닝하여, 실제 고객처럼 행동하는 도메인 특화 AI 가상 고객 캐릭터 개발
-- **TTS 기능 구현**: 가상 고객의 텍스트 응답을 자연스러운 음성으로 변환
-- **핵심 키워드 추출**: 상담 맥락에 맞는 핵심 키워드를 추출하여 실시간 답변 추천 품질 향상
+실시간 상담 중 RAG 문서 검색의 정확도를 높이기 위한 키워드 추출 파이프라인 개발
 
-## 기술적 성장 포인트
+- **한국어 형태소 분석기 Kiwi**를 활용하여 STT 결과에서 명사 추출
+- 금융 도메인 **유의어 사전**을 구축하여 추출된 단어를 정확한 용어로 보정
+- 보정된 키워드로 벡터 DB 검색 → 검색 정확도 향상
 
-> **"불균형한 Tabular 데이터를 정복한 경험이, 도메인 특화 sLLM의 품질을 결정짓는 정교한 텍스트 전처리 역량으로 승화되었습니다."**
+### 2. AI 가상 고객 시뮬레이션 시스템
 
-이전 넷플릭스 프로젝트에서 데이터 불균형이라는 실제 세상의 벽에 부딪히며 **"데이터의 분포를 이해하고 편향을 바로잡는 엔지니어링"**이 성능 향상의 핵심임을 깨달았습니다. 이 경험은 본 프로젝트에서 STT 결과물이라는 '가공되지 않은 불완전한 데이터'를 처리할 때 결정적인 역할을 했습니다.
+신입 상담원이 **실전과 동일한 환경**에서 훈련할 수 있는 교육 시스템 전담 개발
 
-카드사 도메인 지식을 반영한 텍스트 보정 로직을 직접 설계하고, 이를 바탕으로 sLLM 파인튜닝을 진행함으로써 **"범용 AI"가 아닌 "실무에 즉시 투입 가능한 특화 AI"**를 만들어내는 역량을 증명했습니다.
+- **sLLM Fine-tuning**: Kanana-nano-2.1b-instruct 모델을 6,533건의 실제 상담 데이터로 학습
+  - 무미건조한 문장에 감정(친절/불만/성급)을 라벨링 후 해당 감정에 맞게 말투가 부여된 문장으로 각색하여 파인튜닝 학습 데이터로 사용
+- 나이대, 성향, 문의 유형, 말투를 조합한 다양한 **고객 페르소나** 생성
+- **TTS 음성 재생**: 가상 고객의 응답을 실제 음성으로 출력
+
+### 3. 고객 성향 분석 모델 Fine-tuning
+
+- **베이스 모델**: Kanana-1.5-8b-instruct
+- 클래스 재구성(6→5)과 데이터 증강으로 **정확도 37.1% → 83.4% (+47.4%)** 달성
 
 ## 기술 스택
 
 | 분류 | 기술 |
 |------|------|
-| Speech | STT, TTS |
-| AI | sLLM Fine-tuning, RAG, LLM |
-| NLP | 도메인 특화 텍스트 보정, 키워드 추출 |
-| Data | 음성 데이터 전처리 파이프라인 |
+| AI/ML | Kanana (sLLM Fine-tuning), GPT-4o, RAG |
+| NLP | Kiwi (형태소 분석), 금융 도메인 유의어 사전 |
+| Speech | Whisper (STT), Qwen3-TTS |
+| Backend | FastAPI, PostgreSQL + pgvector, Redis |
+| Frontend | React, Tailwind |
+| Infra | AWS EC2, Docker, Vercel |
 
 ## 팀 구성
 
-- 4인 팀 프로젝트
+4인 팀 (RAG 문서 검색 / **키워드 추출·교육 시뮬레이션** / STT·후처리 / DB·프론트엔드)
 
 ## Demo 영상
 

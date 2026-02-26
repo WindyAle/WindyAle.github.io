@@ -124,20 +124,6 @@ export default async function PrintPage() {
                         ))}
                     </div>
 
-                    {/* Certificate (From Left - After Skills) */}
-                    <div>
-                        <h3 className="text-lg font-bold border-b border-slate-700 pb-2 mb-4 text-white">Certificate</h3>
-                        <div className="flex flex-col gap-3">
-                            {leftItems.find(item => item.slug.includes('certificate') && item.type === 'folder')?.items?.map((item) => (
-                                <div key={item.slug} className="text-sm">
-                                    <h4 className="block text-xs text-slate-400 font-bold uppercase">{item.data.title || item.name}</h4>
-                                    {item.data.description && (
-                                        <div className="text-[10px] text-slate-500 mt-0.5">{item.data.description}</div>
-                                    )}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
                 </aside>
 
                 {/* --- RIGHT COLUMN (White Content) --- */}
@@ -262,16 +248,6 @@ export default async function PrintPage() {
                             </div>
                         </section>
                     ))}
-
-                    {/* Other Skills / Swing Dance Story */}
-                    <section className="mt-6 pt-4 border-t border-slate-200">
-                        <h3 className="font-bold text-xs text-slate-900 mb-1 uppercase tracking-wider">
-                            Other Strengths
-                        </h3>
-                        <p className="text-[10px] text-slate-600 font-medium leading-snug">
-                            "14년의 스윙댄스 파트너십 경험을 통해 배운 '유연한 소통'과 '배려'는, 개발팀 내 갈등을 중재하고 시너지를 이끌어내는 저만의 소프트 스킬입니다."
-                        </p>
-                    </section>
 
                 </main>
             </div>
