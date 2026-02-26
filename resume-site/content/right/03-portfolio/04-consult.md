@@ -17,6 +17,7 @@ gallery:
   - "/images/projects/consult/3.png"
   - "/images/projects/consult/4.png"
   - "/images/projects/consult/5.png"
+  - "/images/projects/consult/6.png"
 ---
 
 # CALL:ACT - 카드사 콜센터 상담원을 위한 AI 상담 업무 지원 서비스
