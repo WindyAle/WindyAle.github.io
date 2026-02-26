@@ -5,7 +5,7 @@ period: "2025.09.15 ~ 2025.09.26 (약 2주)"
 description: "Spotify 2000~2025년 곡 데이터를 활용한 KNN 기반 유사 곡 추천 시스템"
 content_type: "portfolio"
 public: true
-badges: ["KNN", "Streamlit", "Data Analysis", "Python"]
+badges: ["KNN", "Streamlit", "Data Analysis"]
 github: "https://github.com/SKNetworks-AI19-250818/SKN19-mini-2Team"
 image: "/images/projects/spotify/main.png"
 thumbnail: "/images/projects/spotify/thumbnail.png"

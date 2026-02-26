@@ -101,13 +101,20 @@ export default function ProjectCard({ item, verticalLayout = false }: Props) {
         )}
 
         {/* Badges for Horizontal Layout (Only if not verticalLayout) */}
-        {!verticalLayout && data.badges && (
-          <div className="flex flex-wrap gap-1.5 mb-2 mt-1">
-            {(data.badges as string[]).map(badge => (
-              <span key={badge} className={`text-[10px] font-medium px-2 py-0.5 rounded border ${getBadgeStyle()}`}>
-                {badge}
+        {!verticalLayout && (data.badges || data.award) && (
+          <div className="flex items-center justify-between gap-2 mb-2">
+            <div className="flex flex-wrap items-center gap-1.5">
+              {data.badges && (data.badges as string[]).map(badge => (
+                <span key={badge} className={`text-[10px] font-medium px-2 py-0.5 rounded border ${getBadgeStyle()}`}>
+                  {badge}
+                </span>
+              ))}
+            </div>
+            {data.award && (
+              <span className="text-[10px] font-medium px-2 py-0.5 rounded border bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 border-amber-200 dark:border-amber-700 shrink-0">
+                🏆 {data.award as string}
               </span>
-            ))}
+            )}
           </div>
         )}
 

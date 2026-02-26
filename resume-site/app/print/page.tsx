@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FileText, PenLine, Briefcase, LayoutGrid } from 'lucide-react';
+import { FileText, PenLine, LayoutGrid } from 'lucide-react';
 import { getSectionData } from '@/lib/markdown';
 
 const PRINT_DOCS = [
@@ -16,14 +16,6 @@ const PRINT_DOCS = [
         Icon: PenLine,
         title: '자기소개서',
         description: '지원동기, 직무역량, 입사 후 포부 등 항목별로 서술하는 자기소개서입니다.',
-        borderColor: 'border-slate-200 hover:border-slate-400',
-        iconColor: 'text-slate-600',
-    },
-    {
-        href: '/print/career',
-        Icon: Briefcase,
-        title: '경력기술서',
-        description: '재직 회사와 담당 프로젝트를 회사별·시간순으로 정리한 상세 경력기술서입니다.',
         borderColor: 'border-slate-200 hover:border-slate-400',
         iconColor: 'text-slate-600',
     },
@@ -66,7 +58,7 @@ export default async function PrintHubPage() {
 
             {/* 문서 카드 그리드 */}
             <main className="max-w-4xl mx-auto px-6 py-12">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                     {PRINT_DOCS.map(({ href, Icon, title, description, borderColor, iconColor }) => (
                         <Link
                             key={href}
@@ -97,20 +89,13 @@ export default async function PrintHubPage() {
                     ))}
                 </div>
 
-                {/* 제출 안내 */}
-                <div className="mt-8 bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
-                    <h3 className="font-semibold text-slate-700 mb-3 text-sm">ZIP 제출 방법</h3>
-                    <ol className="list-decimal list-inside text-sm text-slate-500 space-y-1.5">
-                        <li>각 문서 페이지에서 <strong className="text-slate-700">PDF로 저장</strong> (배경 그래픽 ✅ 체크)</li>
-                        <li>저장된 PDF 4개 파일을 선택 → <strong className="text-slate-700">우클릭 → 압축</strong></li>
-                        <li>ZIP 파일을 지원 프로그램에 제출</li>
-                    </ol>
-                </div>
             </main>
 
             {/* 하단 */}
-            <footer className="text-center text-xs text-slate-400 pb-8">
-                {profile?.data.name} · {profile?.data.email} · {profile?.data.github}
+            <footer className="flex flex-col items-center gap-1 text-xs text-slate-400 pb-8">
+                <span>{profile?.data.name}</span>
+                <span>{profile?.data.email}</span>
+                <span>{profile?.data.github}</span>
             </footer>
         </div>
     );

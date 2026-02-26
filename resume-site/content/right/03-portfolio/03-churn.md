@@ -5,7 +5,7 @@ period: "2025.10.01 ~ 2025.10.15 (2주)"
 description: "LightGBM 기반 구독 이탈 예측 모델 개발 및 하이퍼파라미터 튜닝을 통한 정밀도 96% 달성"
 content_type: "portfolio"
 public: true
-badges: ["Precision 96%", "LightGBM", "Data Analysis", "Feature Engineering"]
+badges: ["LightGBM", "Data Analysis", "Feature Engineering"]
 github: "https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN19-2nd-3Team"
 image: "/images/projects/netflix_churn/main.png"
 thumbnail: "/images/projects/netflix_churn/thumbnail.png"

@@ -6,6 +6,7 @@ description: "STT, RAG, LLM을 활용한 실시간 상담 지원 및 신입 상�
 content_type: "portfolio"
 public: true
 badges: ["STT", "TTS", "sLLM", "RAG", "LLM"]
+award: "SK Networks Family AI Camp 우수상"
 github: "https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN19-FINAL-1Team"
 youtube: "https://www.youtube.com/watch?v=V53akHQd8jU"
 image: "/images/projects/consult/main.png"

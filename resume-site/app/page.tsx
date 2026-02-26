@@ -3,7 +3,7 @@ import { getSectionData } from '@/lib/markdown';
 import Sidebar from '@/components/Sidebar';
 import MarkdownRenderer from '@/components/MarkdownRenderer';
 import ProjectCard from '@/components/ProjectCard';
-import Link from 'next/link';
+import PortfolioSection from '@/components/PortfolioSection';
 
 export default async function Home() {
   const leftItems = await getSectionData('left');
@@ -36,41 +36,38 @@ export default async function Home() {
                   </div>
                 ) : (
                   // Folder Rendering (e.g. Projects)
-                  <div className="space-y-8">
-                    <div className="flex items-baseline justify-between border-b border-neutral-200 dark:border-neutral-800 pb-4">
-                      <h2 className="text-2xl font-bold tracking-tight">
-                        {item.name === '03-portfolio' || item.data.title === 'Portfolio' ? (
-                          <Link href="/portfolio" className="hover:text-blue-600 transition-colors flex items-center gap-2">
-                            {item.data.title || item.name}
-                            <span className="text-sm font-normal text-neutral-400">View All &rarr;</span>
-                          </Link>
-                        ) : (
-                          item.data.title || item.name
+                  item.name === '03-portfolio' || item.data.title === 'Portfolio' ? (
+                    <PortfolioSection item={item} />
+                  ) : (
+                    <div className="space-y-8">
+                      <div className="flex items-baseline justify-between border-b border-neutral-200 dark:border-neutral-800 pb-4">
+                        <h2 className="text-2xl font-bold tracking-tight">
+                          {item.data.title || item.name}
+                        </h2>
+                        {item.data.description && (
+                          <span className="text-sm text-neutral-500">{item.data.description}</span>
                         )}
-                      </h2>
-                      {item.data.description && (
-                        <span className="text-sm text-neutral-500">{item.data.description}</span>
+                      </div>
+
+                      {/* Intro: render markdown content directly */}
+                      {item.items?.some(sub => sub.data.content_type === 'intro') ? (
+                        <div className="space-y-8">
+                          {item.items?.map((subItem) => (
+                            subItem.contentHtml ? (
+                              <MarkdownRenderer key={subItem.slug} contentHtml={subItem.contentHtml} />
+                            ) : null
+                          ))}
+                        </div>
+                      ) : (
+                        /* Render Items (Cards) */
+                        <div className="flex flex-col gap-2">
+                          {item.items?.map((subItem) => (
+                            <ProjectCard key={subItem.slug} item={subItem} />
+                          ))}
+                        </div>
                       )}
                     </div>
-
-                    {/* Intro: render markdown content directly */}
-                    {item.items?.some(sub => sub.data.content_type === 'intro') ? (
-                      <div className="space-y-8">
-                        {item.items?.map((subItem) => (
-                          subItem.contentHtml ? (
-                            <MarkdownRenderer key={subItem.slug} contentHtml={subItem.contentHtml} />
-                          ) : null
-                        ))}
-                      </div>
-                    ) : (
-                      /* Render Items (Cards) */
-                      <div className="flex flex-col gap-2">
-                        {item.items?.map((subItem) => (
-                          <ProjectCard key={subItem.slug} item={subItem} />
-                        ))}
-                      </div>
-                    )}
-                  </div>
+                  )
                 )
                 }
               </section>
