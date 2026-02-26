@@ -11,14 +11,15 @@ const PRINT_DOCS = [
         borderColor: 'border-slate-200 hover:border-slate-400',
         iconColor: 'text-slate-600',
     },
-    {
-        href: '/print/cover-letter',
-        Icon: PenLine,
-        title: '자기소개서',
-        description: '지원동기, 직무역량, 입사 후 포부 등 항목별로 서술하는 자기소개서입니다.',
-        borderColor: 'border-slate-200 hover:border-slate-400',
-        iconColor: 'text-slate-600',
-    },
+    // TODO: 자기소개서 - 추후 공개 예정
+    // {
+    //     href: '/print/cover-letter',
+    //     Icon: PenLine,
+    //     title: '자기소개서',
+    //     description: '지원동기, 직무역량, 입사 후 포부 등 항목별로 서술하는 자기소개서입니다.',
+    //     borderColor: 'border-slate-200 hover:border-slate-400',
+    //     iconColor: 'text-slate-600',
+    // },
     {
         href: '/print/portfolio',
         Icon: LayoutGrid,
